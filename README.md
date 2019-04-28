@@ -1,8 +1,10 @@
 # Bus - LED Dance Floor
 
-Background: Dance Floor has 9 panels each with 9 RGB LEDs, which results in a total of 81 LEDs. Each LED is controlled by 3 bits so there will be 243 bits in total. It is assumed each panel is about 1 foot square.
+### Background: 
+Dance Floor has 9 panels each with 9 RGB LEDs, which results in a total of 81 LEDs. Each LED is controlled by 3 bits so there will be 243 bits in total. It is assumed each panel is about 1 foot square.
 
-Topology: Ring - reduces the amount of wire needed to connect the LEDs and reduces the distance the distance for the data to travel. Connecting the LEDs with twisted pair cables will allow high speed data transmission (Cat5 - 100Mbps) [How Twisted Pair Works](https://sites.google.com/site/markgurries/home/dcc-general-best-practices/wiring-planing/twisted-pair-wiring/how-twisted-pair-wiring-work) The LEDs will likely be linked in a Serpentine pattern, so estimating each row (9 total) at 3ft requires 27ft of wire. I will round this up to 10 meters.
+### Topology: 
+[b]Ring[/b] - reduces the amount of wire needed to connect the LEDs and reduces the distance the distance for the data to travel. Connecting the LEDs with twisted pair cables will allow high speed data transmission (Cat5 - 100Mbps) [How Twisted Pair Works](https://sites.google.com/site/markgurries/home/dcc-general-best-practices/wiring-planing/twisted-pair-wiring/how-twisted-pair-wiring-work) The LEDs will likely be linked in a Serpentine pattern, so estimating each row (9 total) at 3ft requires 27ft of wire. I will round this up to 10 meters.
 
 Protocol: SPI - capable of very high speed data communication. However, as the Dance Floor is a student project, they would likely want to use an Arduino which is only capable of 8Mbps data transfer (as the Master device). [Wikipedia: SPI](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Data_transmission), [Arduino: SPI](https://www.arduino.cc/en/reference/SPI)
 
